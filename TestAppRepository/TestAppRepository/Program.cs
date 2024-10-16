@@ -62,6 +62,12 @@
                     }
 
                     break;
+                case 4:
+                    Console.WriteLine("Write contact name to delete:");
+                    Contact contactToDelete = new Contact();
+                    contactToDelete.Name = "";
+                    break;
+
             }
 
         }
