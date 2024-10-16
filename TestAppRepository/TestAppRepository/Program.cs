@@ -7,7 +7,7 @@
 
             int option;
             int selectedOption = 0;
-            string[] contacts = [];
+            string[] contacts = ["James Dohar", "Mathew Willy"];
 
             Console.WriteLine("Select an option, enter a option number:");
             Console.WriteLine("1 - Add new contact:");
@@ -42,6 +42,25 @@
                     else {
                         Console.WriteLine("Contact list is empty");
                     }
+                    break;
+                case 3:
+                    Console.WriteLine("Search contact name:");
+                    Contact searchingContact = new Contact();
+                    searchingContact.Name = Console.ReadLine();
+                    Console.WriteLine($"searching {searchingContact.Name}...");
+                    
+                    string stringToFind = searchingContact.Name;
+                    string result = Array.Find(contacts, element => element == stringToFind);
+
+                    if (result == stringToFind)
+                    {
+                        Console.WriteLine($"{result} is in the contact list");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{result} not found in the contact list :(");
+                    }
+
                     break;
             }
 
