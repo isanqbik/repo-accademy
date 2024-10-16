@@ -6,10 +6,9 @@
         {
 
             int option;
-            int selectedOption;
+            int selectedOption = 0;
             string[] contacts = [];
 
-            Console.WriteLine(contacts[2]);
             Console.WriteLine("Select an option, enter a option number:");
             Console.WriteLine("1 - Add new contact:");
             Console.WriteLine("2 - View all contacts:");
@@ -30,6 +29,19 @@
                     Console.WriteLine($"new contact added {contact.Name}");
                     contacts = contacts.Append(contact.Name).ToArray();
                     Console.WriteLine("added contact");
+                    break;
+                case 2:
+                    Console.WriteLine("All contact list:");
+                    if (contacts.Length > 0)
+                    {
+                        foreach (string c in contacts)
+                        {
+                            Console.WriteLine(c);
+                        }
+                    }
+                    else {
+                        Console.WriteLine("Contact list is empty");
+                    }
                     break;
             }
 
