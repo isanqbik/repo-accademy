@@ -4,11 +4,20 @@
     {
         static void Main(string[] args)
         {
-            string contacts;
 
-            contacts = "Pepe";
 
-            Console.WriteLine($"Add Contact!{contacts}");
+
+            static void AddNewContact()
+            {
+                Console.WriteLine("Add new contact:");
+                string Contacts = string.Empty;
+                string newContact = Console.ReadLine();
+                Contacts +=  newContact + ", ";
+                Console.WriteLine($"Contacts are: {Contacts}");
+            }
+
+            AddNewContact();
+
         }
     }
 }
