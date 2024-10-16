@@ -7,7 +7,9 @@
 
             int option;
             int selectedOption;
+            string[] contacts = [];
 
+            Console.WriteLine(contacts[2]);
             Console.WriteLine("Select an option, enter a option number:");
             Console.WriteLine("1 - Add new contact:");
             Console.WriteLine("2 - View all contacts:");
@@ -19,6 +21,17 @@
             selectedOption = Convert.ToInt32(answer);
 
             Console.WriteLine($"Option selected:{selectedOption}");
+
+            switch (selectedOption) { 
+                case 1:
+                    Console.WriteLine("Add new contact name:");
+                    Contact contact = new Contact();
+                    contact.Name = Console.ReadLine();
+                    Console.WriteLine($"new contact added {contact.Name}");
+                    contacts = contacts.Append(contact.Name).ToArray();
+                    Console.WriteLine("added contact");
+                    break;
+            }
 
         }
     }
