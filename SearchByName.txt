@@ -1,0 +1,1 @@
+Feature user search a contact by name: user can insert contact name and the program search in the list if this contact exist
