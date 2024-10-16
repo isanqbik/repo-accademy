@@ -65,9 +65,12 @@
                 case 4:
                     Console.WriteLine("Write contact name to delete:");
                     Contact contactToDelete = new Contact();
-                    contactToDelete.Name = "";
+                    contactToDelete.Name = Console.ReadLine();
+                    Console.WriteLine($"{contactToDelete.Name} has been removed from contact list");
                     break;
-
+                case 5:
+                    Console.WriteLine("Good bye");
+                    break;
             }
 
         }
