@@ -27,11 +27,20 @@
                 string contactSearched = Console.ReadLine();
                 Console.WriteLine("Contact searched:" + contactSearched);
             }
-            
+            static void DeleteContact()
+            {
+                Console.WriteLine("Contact to delete?");
+
+                string contactDeleted = Console.ReadLine();
+                Console.WriteLine("Contact deleted:" + contactDeleted);
+            }
+
             AddNewContact();
             ViewAllContacts();
             SearchContact();
-            
+            DeleteContact();
+
+
         }
     }
 }
