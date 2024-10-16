@@ -20,9 +20,18 @@
                 Console.WriteLine($"All Contacts are: ");
             }
 
+            static void SearchContact()
+            {
+                Console.WriteLine("Search:");
+
+                string contactSearched = Console.ReadLine();
+                Console.WriteLine("Contact searched:" + contactSearched);
+            }
+            
             AddNewContact();
             ViewAllContacts();
-
+            SearchContact();
+            
         }
     }
 }
