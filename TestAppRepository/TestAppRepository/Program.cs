@@ -5,18 +5,23 @@
         static void Main(string[] args)
         {
 
-
+            string Contacts = string.Empty;
 
             static void AddNewContact()
             {
                 Console.WriteLine("Add new contact:");
-                string Contacts = string.Empty;
+                
                 string newContact = Console.ReadLine();
-                Contacts +=  newContact + ", ";
-                Console.WriteLine($"Contacts are: {Contacts}");
+                Console.WriteLine("new contact added:" + newContact);
+            }
+
+            static void ViewAllContacts()
+            {
+                Console.WriteLine($"All Contacts are: ");
             }
 
             AddNewContact();
+            ViewAllContacts();
 
         }
     }
