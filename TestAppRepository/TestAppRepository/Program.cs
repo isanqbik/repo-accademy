@@ -35,11 +35,16 @@
                 Console.WriteLine("Contact deleted:" + contactDeleted);
             }
 
+            static void ExitProgram()
+            {
+                return;
+            }
+
             AddNewContact();
             ViewAllContacts();
             SearchContact();
             DeleteContact();
-
+            ExitProgram();
 
         }
     }
