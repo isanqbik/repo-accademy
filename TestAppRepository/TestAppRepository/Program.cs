@@ -5,46 +5,20 @@
         static void Main(string[] args)
         {
 
-            string Contacts = string.Empty;
+            int option;
+            int selectedOption;
 
-            static void AddNewContact()
-            {
-                Console.WriteLine("Add new contact:");
-                
-                string newContact = Console.ReadLine();
-                Console.WriteLine("new contact added:" + newContact);
-            }
+            Console.WriteLine("Select an option, enter a option number:");
+            Console.WriteLine("1 - Add new contact:");
+            Console.WriteLine("2 - View all contacts:");
+            Console.WriteLine("3 - Search contact:");
+            Console.WriteLine("4 - Delete contact:");
+            Console.WriteLine("5 - Exit program:");
 
-            static void ViewAllContacts()
-            {
-                Console.WriteLine($"All Contacts are: ");
-            }
+            string answer = Console.ReadLine();
+            selectedOption = Convert.ToInt32(answer);
 
-            static void SearchContact()
-            {
-                Console.WriteLine("Search:");
-
-                string contactSearched = Console.ReadLine();
-                Console.WriteLine("Contact searched:" + contactSearched);
-            }
-            static void DeleteContact()
-            {
-                Console.WriteLine("Contact to delete?");
-
-                string contactDeleted = Console.ReadLine();
-                Console.WriteLine("Contact deleted:" + contactDeleted);
-            }
-
-            static void ExitProgram()
-            {
-                return;
-            }
-
-            AddNewContact();
-            ViewAllContacts();
-            SearchContact();
-            DeleteContact();
-            ExitProgram();
+            Console.WriteLine($"Option selected:{selectedOption}");
 
         }
     }
