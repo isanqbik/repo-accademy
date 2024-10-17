@@ -22,9 +22,21 @@
                 Console.WriteLine("5 - Exit program:");
 
                 string answer = Console.ReadLine();
-                selectedOption = Convert.ToInt32(answer);
 
-                Console.WriteLine($"Option selected:{selectedOption}");
+                if (int.TryParse(answer, out int value))
+                {
+                    if (selectedOption <= 5)
+                    {
+                        Console.WriteLine("The number is not from 1 to 5");
+                    }
+                    selectedOption = Convert.ToInt32(answer);
+                    Console.WriteLine($"Option selected:{selectedOption}");
+                }
+                else 
+                {
+                    Console.WriteLine("You must write a number from 1 to 5");
+                }
+
 
                 switch (selectedOption)
                 {
