@@ -80,7 +80,6 @@
                         {
                             Console.WriteLine($"{stringToFind} not found in the contact list :(");
                         }
-
                         break;
                     case 4:
                         Console.WriteLine("Write contact name to delete:");
